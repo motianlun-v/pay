@@ -1,0 +1,119 @@
+header {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  position: relative; }
+  header i {
+    position: absolute;
+    top: 0.16rem; }
+  header .fa-angle-left {
+    left: 0.15rem;
+    font-size: 18px; }
+  header .fa-newspaper-o {
+    right: 0.15rem; }
+
+section {
+  width: 100%;
+  flex: 1;
+  background-color: #ccc;
+  overflow-y: scroll; }
+  section .address {
+    background-color: #fff;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box;
+    height: 0.9rem; }
+    section .address .left {
+      float: left;
+      width: 95%; }
+      section .address .left p {
+        line-height: 0.4rem; }
+    section .address .right {
+      width: 5%;
+      float: right; }
+      section .address .right i {
+        margin-top: 0.3rem;
+        font-size: 18px; }
+  section .banner {
+    height: 0.1rem;
+    background: url("../images/bod-img.png");
+    margin-bottom: 0.1rem; }
+  section .pro {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box;
+    background-color: #fff; }
+    section .pro .title {
+      line-height: 0.65rem;
+      position: relative; }
+      section .pro .title img {
+        width: 0.4rem;
+        position: absolute;
+        top: 0.07rem; }
+      section .pro .title span {
+        margin-left: 0.5rem; }
+    section .pro dl {
+      height: 1.5rem; }
+      section .pro dl dt {
+        width: 1rem;
+        float: left;
+        margin-right: 0.2rem; }
+        section .pro dl dt img {
+          width: 100%; }
+      section .pro dl dd .dd-ms {
+        margin-top: 0.3rem;
+        display: flex; }
+        section .pro dl dd .dd-ms div {
+          flex: 1; }
+          section .pro dl dd .dd-ms div p {
+            height: 0.3rem; }
+            section .pro dl dd .dd-ms div p button {
+              background-color: #ffffff;
+              width: 0.3rem;
+              height: 100%;
+              border: 1px solid #ccc; }
+            section .pro dl dd .dd-ms div p span {
+              display: inline-block; }
+  section .msg {
+    margin-bottom: 0.1rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 0.7rem;
+    display: flex;
+    flex-direction: column; }
+    section .msg p {
+      flex: 1; }
+      section .msg p span, section .msg p b {
+        line-height: 0.3rem;
+        float: right; }
+  section .pay {
+    height: 1.75rem;
+    margin-bottom: 0.1rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    line-height: 0.3rem; }
+    section .pay p {
+      line-height: 0.3rem; }
+
+footer {
+  height: 0.6rem;
+  display: flex;
+  text-align: center; }
+  footer div {
+    flex: 1;
+    height: 100%; }
+    footer div p {
+      line-height: 0.3rem; }
+    footer div button {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: red;
+      color: #fff; }
+
+/*# sourceMappingURL=style.css.map */

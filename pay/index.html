@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/togeat.css">
+	<title>pay</title>
+</head>
+<body ng-app='app' ng-controller='area'>
+	<header>
+		<i class="fa fa-angle-left"></i>
+		订单支付
+		<i class="fa fa-newspaper-o"></i>
+	</header>
+	<section>
+		<div class="address">
+			 <div class="left">
+				 <p><b>路飞</b> <num>138****8888</num></p>
+				 <span><i class="fa fa-address-book"></i>北京市海淀区知春路北京市海淀区知春路北京市海淀区 知春路</span>
+			 </div>
+			<div class="right">
+				<i class="fa fa-angle-right"></i>
+			</div>
+		</div>
+		<div class="banner">
+		</div>
+		<div class="pro">
+			<div class="title">
+				<img src="images/icon.png" alt=""><span>恒指然旗舰店</span>
+			</div>
+			<dl>
+				<dt><img src="images/img.png" alt=""></dt>
+				<dd>
+					<h4>维维嚼益嚼水果大豆棒橙味维维嚼 益嚼水果大豆棒橙味...</h4>
+					<div class="dd-ms">
+						<div class="left">
+							<b>￥{{price}}</b>
+							<a>¥1000.00</a>
+						</div>
+						<div class="right">
+							<p>
+								<button ng-click='cut()'>-</button>
+								<span>{{count}}</span>
+								<button ng-click='add()'>+</button>
+							</p>
+						</div>
+					</div>
+				</dd>
+			</dl>
+		</div>
+		<div class="msg">
+			<p><span>{{totalPic}}</span>商品总金额:</p>
+			<p>运费:<span>¥10.00</span></p>
+			<p>总额(含运费):<b>¥{{addFreight}}</b></p>
+		</div>
+		<div class="pay">
+			<div class="con"><span>余额支付 ¥100.00</span>
+					<label class="toggle-radio">
+						<input type="checkbox" ng-model='isSelected1'>
+
+						<span class="track">
+							<div class="icon"></div>
+						</span>
+					</label>
+			</div>
+			<div class="con"><span>奖金支付 ¥100.00</span>
+					<label class="toggle-radio">
+						<input type="checkbox" ng-model='isSelected'>
+
+						<span class="track">
+							<div class="icon"></div>
+						</span>
+					</label>
+			</div>
+			<div class="con">其他支付方式 <i class="fa fa-angle-right"></i></div>
+		</div>
+	</section>
+	<footer>
+			<div></div>
+			<div>
+				<p>总计：<b>{{totalPics}}</b></p>
+				<span>(含运费)</span>
+			</div>
+		<div>
+			<button ng-click='send()'>提交订单</button>
+		</div>
+	</footer>
+	<script src="bin/angular.min.js"></script>
+	<script>
+        var app = angular.module('app',[]);
+        app.controller('area',function($scope){
+            $scope.count = 1;
+            $scope.price = 988.00;
+            $scope.totalPic = 898.00;
+            $scope.addFreight = $scope.totalPic+10;
+            $scope.totalPics = $scope.addFreight;
+            $scope.add = function(){
+                $scope.count++;
+                total();
+            }
+            $scope.cut = function(){
+                $scope.count--;
+                total();
+            }
+            $scope.send=function(){
+            	alert('正在提交')
+            }
+            
+            function total(){
+                $scope.totalPic = $scope.price*$scope.count;
+                $scope.addFreight = $scope.totalPic+10;
+                $scope.totalPics = $scope.addFreight;
+                
+            }
+            console.log($scope.isSelected1)
+            if ($scope.isSelected == 'true') {
+        		$scope.totalPics = addFreight-100;
+            }else{
+            	$scope.totalPics = $scope.addFreight;
+            };
+            if ($scope.isSelected1 == 'true') {
+        		$scope.totalPics = addFreight-100;
+            }else{
+            	$scope.totalPics = $scope.addFreight;
+            };
+        })
+	</script>
+</body>
+</html>
